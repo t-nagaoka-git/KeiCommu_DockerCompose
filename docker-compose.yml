@@ -23,7 +23,7 @@ services:
       - 3000:3000
     volumes:
       - ../KeiCommu_Api:/app
-    command: /bin/sh -c "rm -f /app/tmp/pids/server.pid && rails s"
+    command: /bin/sh -c "rm -f /app/tmp/pids/server.pid && rails s -b 0.0.0.0"
   front:
     build:
       context: ../KeiCommu_Front/
